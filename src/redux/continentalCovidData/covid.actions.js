@@ -1,5 +1,5 @@
 import axios from 'axios';
-import getCountry from '../covidData';
+import { getContinent } from '../covidDataAPI';
 import {
   REQUEST_COVID_DATA,
   REQUEST_COVID_DATA_SUCCESS,
@@ -20,14 +20,12 @@ const errorRequestingCovidData = (error) => ({
   payload: error,
 });
 
-const fetchCovidData = (country) => (dispatch) => {
+const fetchCovidData = (country) => async (dispatch) => {
   dispatch(requestCovidData());
-  axios.get(getCountry(country), { mode: 'cors' })
+  axios.get(getContinent(country))
     .then((response) => {
-      console.log(response);
-      dispatch(requestCovidDataSucess(response));
+      dispatch(requestCovidDataSucess(response.data));
     }).catch((error) => {
-      console.log(error);
       dispatch(errorRequestingCovidData(error));
     });
 };
