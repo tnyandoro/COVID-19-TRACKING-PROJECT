@@ -55,7 +55,7 @@ const Home = () => {
                 continentalCovidData && continentalCovidData.map((data) => {
                   const { country, population, capital_city } = data.All;
                   return (
-                    <Col sm={12} md={3} key={data.abbreviation}>
+                    <Col xs={6} md={3} key={data.abbreviation}>
                       <Card style={{ width: '18rem' }}>
                         <Card.Body>
                           <Card.Title>{ country }</Card.Title>
