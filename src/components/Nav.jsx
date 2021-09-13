@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  BrowserRouter as Router, Switch, Route,
+  BrowserRouter as Router,
 } from 'react-router-dom';
 import './Nav.css';
 
@@ -12,10 +12,6 @@ export default function Nav() {
           Navigation Bar
         </nav>
       </header>
-      <Switch>
-        <Route path="/categories" />
-        <Route path="/" />
-      </Switch>
     </Router>
   );
 }
