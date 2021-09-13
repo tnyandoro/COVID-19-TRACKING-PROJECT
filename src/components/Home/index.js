@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import fetchCovidData from '../../redux/continentalCovidData/covid.actions';
+import fetchCovidData from '../../redux/continentalCovidData/continentCovid.actions';
 
 const Home = () => {
   const covidData = useSelector(({ covid }) => covid);

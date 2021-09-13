@@ -4,7 +4,7 @@ import {
   REQUEST_COVID_DATA,
   REQUEST_COVID_DATA_SUCCESS,
   ERROR_REQUESTING_COVID_DATA,
-} from './covid.types';
+} from './continentCovid.types';
 
 const requestCovidData = () => ({
   type: REQUEST_COVID_DATA,
