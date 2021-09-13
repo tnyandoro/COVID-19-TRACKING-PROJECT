@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import fetchCovidData from '../../redux/continentalCovidData/continentCovid.actions';
 
 const Home = () => {
-  const covidData = useSelector(({ covid }) => covid);
+  const continentalCovidData = useSelector(({ continent }) => continent);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -15,7 +15,7 @@ const Home = () => {
   return (
     <div>
       <h1>Hello Covid!</h1>
-      { JSON.stringify(covidData) }
+      { JSON.stringify(continentalCovidData) }
     </div>
   );
 };

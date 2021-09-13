@@ -24,7 +24,9 @@ const fetchCovidData = (country) => async (dispatch) => {
   dispatch(requestCovidData());
   axios.get(getContinent(country))
     .then((response) => {
-      dispatch(requestCovidDataSucess(response.data));
+      const result = Object.values(response.data);
+
+      dispatch(requestCovidDataSucess(result));
     }).catch((error) => {
       dispatch(errorRequestingCovidData(error));
     });
