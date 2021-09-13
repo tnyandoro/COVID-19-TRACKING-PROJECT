@@ -9,6 +9,7 @@ import {
 import ClipLoader from 'react-spinners/ClipLoader';
 import fetchCovidData from '../../redux/continentalCovidData/continentCovid.actions';
 import fetchCountryData from '../../redux/countryCovidData/countryCovid.actions';
+import './Index.css';
 
 const override = css`
   display: block;
@@ -30,25 +31,26 @@ const Home = () => {
   }, [region]);
 
   return (
-    <Container>
-      <Row>
-        <Col xs={12}>
-          <Form>
-            <Form.Group>
-              <Form.Select value={region} arial-label="Select region" onChange={(e) => setRegion(e.target.value)}>
-                <option>Select region</option>
-                <option value="africa">Africa</option>
-                <option value="asia">Asia</option>
-                <option value="europe">Europe</option>
-                <option value="australia">Australia</option>
-                <option value="north america">North America</option>
-                <option value="south america">South America</option>
-              </Form.Select>
-            </Form.Group>
-          </Form>
-        </Col>
-      </Row>
-      {
+    <div className="main">
+      <Container>
+        <Row>
+          <Col xs={12}>
+            <Form>
+              <Form.Group>
+                <Form.Select value={region} arial-label="Select region" onChange={(e) => setRegion(e.target.value)}>
+                  <option>Select region</option>
+                  <option value="africa">Africa</option>
+                  <option value="asia">Asia</option>
+                  <option value="europe">Europe</option>
+                  <option value="australia">Australia</option>
+                  <option value="north america">North America</option>
+                  <option value="south america">South America</option>
+                </Form.Select>
+              </Form.Group>
+            </Form>
+          </Col>
+        </Row>
+        {
           !isLoading ? (<ClipLoader color="green" loading={isLoading} css={override} size={150} />) : (
             <Row>
               {
@@ -77,7 +79,8 @@ const Home = () => {
             </Row>
           )
         }
-    </Container>
+      </Container>
+    </div>
   );
 };
 
