@@ -25,7 +25,8 @@ const fetchCountryData = (country) => (dispatch) => {
 
   axios.get(getCountry(country))
     .then((response) => {
-      dispatch(requestCountryCovidDataSuccess(response));
+      const result = Object.values(response.data);
+      dispatch(requestCountryCovidDataSuccess(result));
     }).catch((error) => {
       dispatch(requestCountryCovidDataFailure(error));
     });
