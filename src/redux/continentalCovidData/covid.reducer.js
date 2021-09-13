@@ -6,7 +6,7 @@ import {
 
 const initialState = {
   isLoading: false,
-  data: [],
+  covidData: [],
   error: '',
 };
 
@@ -22,7 +22,7 @@ const covidReducer = (state = initialState, action) => {
       return {
         ...state,
         isLoading: false,
-        data: action.payload,
+        covidData: action.payload,
         error: '',
       };
 
