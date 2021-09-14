@@ -2,6 +2,7 @@
   "name": "covid-19-tracker",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://tnyandoro.github.io/covid-19-tracking-project/",
   "dependencies": {
     "@emotion/react": "^11.4.1",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
@@ -12,6 +13,7 @@
     "axios": "^0.21.4",
     "bootstrap": "^5.1.0",
     "bootstrap-icons": "^1.5.0",
+    "gh-pages": "^1.2.0",
     "react": "^17.0.2",
     "react-bootstrap": "^2.0.0-beta.6",
     "react-bootstrap-country-select": "^1.0.0",
@@ -32,7 +34,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -d public"
   },
   "eslintConfig": {
     "extends": [
