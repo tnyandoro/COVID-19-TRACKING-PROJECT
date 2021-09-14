@@ -8,7 +8,7 @@
 
 |Main Project page
 
-|![Covid-19](https://user-images.githubusercontent.com/30318155/133264437-38ea7329-a9a9-47d3-8a71-39ca3c5c6c5c.png)|
+|![COVID-19-TRACKING-PROJECT](https://user-images.githubusercontent.com/30318155/133264437-38ea7329-a9a9-47d3-8a71-39ca3c5c6c5c.png)|
 
 ## Built With
 
@@ -24,7 +24,7 @@
 
 ## Our Project
 
-This project is found on the following Repo [Fantastic Restaurant](https://github.com/tnyandoro/JavaScript-Capstone/)
+This project is found on the following Repo [COVID-19-TRACKING-PROJECT](https://github.com/tnyandoro/COVID-19-TRACKING-PROJECT/)
 
 ## Live Demo
 
@@ -52,12 +52,6 @@ A Morden Browser
 - Twitter: [@tendainyandoro](https://twitter.com/tendainyandoro)
 - LinkedIn: [Tendai Nyandoro](https://www.linkedin.com/in/tendai-nyandoro/)
 
-
-👤 **Donat UWAMAHORO**
-
-- GitHub: [@Donat UWAMAHORO](https://github.com/uwadonat)
-- Twitter: [@Donat UWAMAHORO](https://twitter.com/uwahoroDonat)
-- LinkedIn: [Donat UWAMAHORO](https://www.linkedin.com/in/uwadonat/)
 ## 🤝 Contributing
 
 Contributions, issues and feature requests are welcome!
