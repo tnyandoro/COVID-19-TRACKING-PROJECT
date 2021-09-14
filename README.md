@@ -35,7 +35,7 @@ You can view the live demo of the project [Here!](https://tnyandoro.github.io/Ja
 A Morden Browser
 
 ### Setup
-- Go to [https://github.com/tnyandoro/JavaScript-Capstone]
+- Go to [https://github.com/tnyandoro/COVID-19-TRACKING-PROJECT]
 - Clone the project to your local machine
 - Cd into your directory
 - Run npm install
@@ -65,8 +65,8 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 
 - This project was inspired by the [Microverse](https://www.microverse.org/) for the  program
-- Thanks to [The MealDB](https://www.themealdb.com/)
-- Thanks to [The Involvement API](https://www.notion.so/Involvement-API-869e60b5ad104603aa6db59e08150270)
+- Thanks to [The mmediagroup](https://covid-api.mmediagroup.fr//)
+- Thanks to [Font Awesome](https://fontawesome.com/)
 
 
 ## 📝 License
