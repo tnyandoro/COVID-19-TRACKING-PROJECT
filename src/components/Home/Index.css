@@ -1,4 +1,3 @@
-
 .main {
   color: #fff;
   background-color: #4369b2;
@@ -7,4 +6,32 @@
 .card {
   color: #fff;
   background-color: #3d60a3;
+  border: none;
+  border-radius: 0;
+}
+
+.btn {
+  background: none;
+  border: none;
+}
+
+.img {
+  margin-top: 5%;
+  width: 100%;
+}
+
+.region {
+  font-size: 2.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.regionName {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  background-color: #5888e4;
 }

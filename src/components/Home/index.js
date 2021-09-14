@@ -10,6 +10,7 @@ import ClipLoader from 'react-spinners/ClipLoader';
 import fetchCovidData from '../../redux/continentalCovidData/continentCovid.actions';
 import fetchCountryData from '../../redux/countryCovidData/countryCovid.actions';
 import './Index.css';
+import covid from '../covid.png';
 
 const override = css`
   display: block;
@@ -33,7 +34,15 @@ const Home = () => {
   return (
     <div className="main">
       <Container>
-        <Row>
+        <Row className="title">
+          <Col xs={6}>
+            <img src={covid} alt="covid" className="img" />
+          </Col>
+          <Col xs={6} className="regionName">
+            <h1 className="region">{region.toUpperCase()}</h1>
+          </Col>
+        </Row>
+        <Row className="my-3">
           <Col xs={12}>
             <Form>
               <Form.Group>
@@ -58,16 +67,28 @@ const Home = () => {
                   const { country, population, capital_city } = data.All;
                   return (
                     <Col className="card" xs={6} md={3} key={data.abbreviation}>
-                      <Card style={{ width: '18rem' }}>
+                      <Card>
                         <Card.Body>
-                          <Card.Title>{ country }</Card.Title>
+                          <Card.Title>
+                            Country: &nbsp;
+                            { country }
+                          </Card.Title>
                           <Card.Text>
-                            <span>{capital_city}</span>
+                            <span>
+                              {' '}
+                              Capital City: &nbsp;
+                              {capital_city}
+                            </span>
                             {' '}
                             &nbsp;
-                            <span>{population}</span>
+                            <br />
+                            <span>
+                              {' '}
+                              Population: &nbsp;
+                              {population}
+                            </span>
                           </Card.Text>
-                          <Button type="button" onClick={() => dispatch(fetchCountryData(country))}>
+                          <Button className="btn" type="button" onClick={() => dispatch(fetchCountryData(country))}>
                             <Link to={`/country/${country}`} className="text-light">More Details</Link>
                           </Button>
                         </Card.Body>
