@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React from 'react';
-import { faArrowLeft, faMicrophone, faCog } from '@fortawesome/free-solid-svg-icons';
+import { faChevronLeft, faMicrophone, faCog } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   BrowserRouter as Router, useHistory,
@@ -16,7 +16,7 @@ export default function Nav() {
       <header>
         <nav className="nav">
           <span onClick={() => history.goBack()}>
-            <FontAwesomeIcon icon={faArrowLeft} />
+            <FontAwesomeIcon icon={faChevronLeft} />
           </span>
           <h4>2019</h4>
           <h4>COVID-19</h4>

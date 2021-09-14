@@ -7,6 +7,8 @@ import {
   Container, Col, Row, Form, Card, Button,
 } from 'react-bootstrap';
 import ClipLoader from 'react-spinners/ClipLoader';
+import { faArrowAltCircleRight } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import fetchCovidData from '../../redux/continentalCovidData/continentCovid.actions';
 import fetchCountryData from '../../redux/countryCovidData/countryCovid.actions';
 import './Index.css';
@@ -89,7 +91,7 @@ const Home = () => {
                             </span>
                           </Card.Text>
                           <Button className="btn" type="button" onClick={() => dispatch(fetchCountryData(country))}>
-                            <Link to={`/country/${country}`} className="text-light">More Details</Link>
+                            <Link to={`/country/${country}`} className="text-light"><FontAwesomeIcon icon={faArrowAltCircleRight} /></Link>
                           </Button>
                         </Card.Body>
                       </Card>
