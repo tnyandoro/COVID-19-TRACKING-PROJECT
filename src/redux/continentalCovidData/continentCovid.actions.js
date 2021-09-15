@@ -6,16 +6,16 @@ import {
   ERROR_REQUESTING_COVID_DATA,
 } from './continentCovid.types';
 
-const requestCovidData = () => ({
+export const requestCovidData = () => ({
   type: REQUEST_COVID_DATA,
 });
 
-const requestCovidDataSucess = (data) => ({
+export const requestCovidDataSucess = (data) => ({
   type: REQUEST_COVID_DATA_SUCCESS,
   payload: data,
 });
 
-const errorRequestingCovidData = (error) => ({
+export const errorRequestingCovidData = (error) => ({
   type: ERROR_REQUESTING_COVID_DATA,
   payload: error,
 });

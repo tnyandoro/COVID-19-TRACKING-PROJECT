@@ -74,6 +74,9 @@ const Home = () => {
                           <Card.Title>
                             Country: &nbsp;
                             { country }
+                            <Button className="btn" type="button" onClick={() => dispatch(fetchCountryData(country))}>
+                              <Link to={`/country/${country}`} className="text-light"><FontAwesomeIcon icon={faArrowAltCircleRight} size="1.5x" /></Link>
+                            </Button>
                           </Card.Title>
                           <Card.Text>
                             <span>
@@ -90,9 +93,6 @@ const Home = () => {
                               {population}
                             </span>
                           </Card.Text>
-                          <Button className="btn" type="button" onClick={() => dispatch(fetchCountryData(country))}>
-                            <Link to={`/country/${country}`} className="text-light"><FontAwesomeIcon icon={faArrowAltCircleRight} /></Link>
-                          </Button>
                         </Card.Body>
                       </Card>
                     </Col>

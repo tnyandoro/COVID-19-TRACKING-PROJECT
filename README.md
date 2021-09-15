@@ -67,6 +67,7 @@ Give a ⭐️ if you like this project!
 - This project was inspired by the [Microverse](https://www.microverse.org/) for the  program
 - Thanks to [The mmediagroup](https://covid-api.mmediagroup.fr//)
 - Thanks to [Font Awesome](https://fontawesome.com/)
+- Thanks to [ Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio/) for the original design
 
 
 ## 📝 License

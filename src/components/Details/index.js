@@ -1,6 +1,8 @@
 /* eslint-disable camelcase */
 import React from 'react';
 import { useSelector } from 'react-redux';
+import { faArrowAltCircleRight } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   Container,
 } from 'react-bootstrap';
@@ -16,7 +18,7 @@ function Details() {
           confirmed, recovered, deaths, country, capital_city, abbreviation,
         }) => (
           <div className="country" key={abbreviation}>
-            <h1>Country Covid-19 Details</h1>
+            <h1>Covid-19 Details</h1>
             <h2>
               Country: &nbsp;
               { country }
@@ -44,6 +46,9 @@ function Details() {
           <p>No data to display...</p>
         )
       }
+      </div>
+      <div>
+        <p><FontAwesomeIcon icon={faArrowAltCircleRight} size="1.5x" /></p>
       </div>
     </Container>
 

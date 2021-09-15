@@ -6,16 +6,16 @@ import {
   REQUEST_COUNTRY_COVID_DATA_FAILURE,
 } from './countryCovid.types';
 
-const requestCountryCovidData = () => ({
+export const requestCountryCovidData = () => ({
   type: REQUEST_COUNTRY_COVID_DATA,
 });
 
-const requestCountryCovidDataSuccess = (payload) => ({
+export const requestCountryCovidDataSuccess = (payload) => ({
   type: REQUEST_COUNTRY_COVID_DATA_SUCCESS,
   payload,
 });
 
-const requestCountryCovidDataFailure = (error) => ({
+export const requestCountryCovidDataFailure = (error) => ({
   type: REQUEST_COUNTRY_COVID_DATA_FAILURE,
   payload: error,
 });
