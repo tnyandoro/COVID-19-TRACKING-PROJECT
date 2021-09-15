@@ -43,15 +43,24 @@ body {
   font-family: 'Gill Sans ExtraBoldDisplay', sans-serif;
 }
 
+.details_page,
 .country {
-  background-color: #5888e4;
   color: #fff;
   font-family: 'Lato', sans-serif;
 }
 
 .details_page {
-  display: flex;
-  flex-direction: column;
+  width: 100%;
   color: #fff;
-  background-color: #4369b2;
+}
+
+.inside,
+.details_page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cases {
+  background-color: #5888e4;
 }

@@ -11,44 +11,52 @@ function Details() {
   const countryCovidData = useSelector(({ country }) => country.covidData);
 
   return (
-    <Container className="details_page">
-      <div>
-        {
+    <Container>
+      <div className="details_page">
+        <div className="inside">
+          {
         countryCovidData.length > 0 ? countryCovidData.map(({
           confirmed, recovered, deaths, country, capital_city, abbreviation,
         }) => (
           <div className="country" key={abbreviation}>
-            <h1>Covid-19 Details</h1>
-            <h2>
-              Country: &nbsp;
-              { country }
-            </h2>
-            <h3>
-              Comfirmed Cases: &nbsp;
-              { confirmed }
-            </h3>
-            <h4>
-              Deaths: &nbsp;
-              { deaths }
-            </h4>
-            <h5>
-              {' '}
-              Recovered: &nbsp;
-              { recovered }
-            </h5>
-            <h5>
-              Capital: &nbsp;
-              { capital_city }
-            </h5>
+            <h3>Covid-19 Details</h3>
+            <div>
+              <h4>
+                Country: &nbsp;
+                { country }
+              </h4>
+            </div>
+            <div>
+              <h5 className="cases">
+                Comfirmed Cases: &nbsp;
+                { confirmed }
+              </h5>
+            </div>
+            <div>
+              <h4>
+                Deaths: &nbsp;
+                { deaths }
+              </h4>
+              <h5>
+                {' '}
+                Recovered: &nbsp;
+                { recovered }
+              </h5>
+              <h5>
+                Capital: &nbsp;
+                { capital_city }
+              </h5>
+            </div>
 
           </div>
         )) : (
           <p>No data to display...</p>
         )
       }
-      </div>
-      <div>
-        <p><FontAwesomeIcon icon={faArrowAltCircleRight} size="1.5x" /></p>
+        </div>
+        <div>
+          <p><FontAwesomeIcon icon={faArrowAltCircleRight} /></p>
+        </div>
       </div>
     </Container>
 
