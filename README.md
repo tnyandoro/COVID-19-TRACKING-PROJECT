@@ -28,7 +28,7 @@ This project is found on the following Repo [COVID-19-TRACKING-PROJECT](https://
 
 ## Live Demo
 
-You can view the live demo of the project [Here!](https://tnyandoro.github.io/JavaScript-Capstone/)
+You can view the live demo of the project [Here!](https://614255540bbc8400e31a7e9a--jolly-tereshkova-efa063.netlify.app/)
 
 ### Prerequisites
 
