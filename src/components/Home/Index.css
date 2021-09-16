@@ -9,8 +9,18 @@ body {
 .card {
   color: #fff;
   background-color: #3d60a3;
+  opacity: 0.8;
   border: none;
   border-radius: 0;
+}
+
+.card:hover {
+  opacity: 0.5;
+}
+
+.card:nth-child(4n + 2),
+.card:nth-child(4n + 4) {
+  background-color: rgba(11, 27, 100, 0.08);
 }
 
 .btn {
@@ -19,7 +29,7 @@ body {
 }
 
 .img {
-  opacity: 0.5;
+  opacity: 0.1;
   margin-top: 5%;
   width: 100%;
 }
@@ -58,7 +68,7 @@ body {
 .details_page {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .cases {

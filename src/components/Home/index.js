@@ -66,25 +66,18 @@ const Home = () => {
             <Row>
               {
                 continentalCovidData && continentalCovidData.map((data) => {
-                  const { country, population, capital_city } = data.All;
+                  const { country, population } = data.All;
                   return (
-                    <Col className="card" xs={6} md={3} key={data.abbreviation}>
+                    <Col className="card" xs={6} sm={6} md={3} key={data.abbreviation}>
                       <Card>
                         <Card.Body>
                           <Card.Title>
-                            Country: &nbsp;
                             { country }
                             <Button className="btn" type="button" onClick={() => dispatch(fetchCountryData(country))}>
                               <Link to={`/country/${country}`} className="text-light"><FontAwesomeIcon icon={faArrowAltCircleRight} size="1.5x" /></Link>
                             </Button>
                           </Card.Title>
                           <Card.Text>
-                            <span>
-                              {' '}
-                              Capital City: &nbsp;
-                              {capital_city}
-                            </span>
-                            {' '}
                             &nbsp;
                             <br />
                             <span>
