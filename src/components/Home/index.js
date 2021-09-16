@@ -69,13 +69,15 @@ const Home = () => {
                   const { country, confirmed } = data.All;
                   return (
                     <Col className="card" xs={6} md={3} key={data.abbreviation}>
-                      <Card className=".card-details">
+                      <div className="arrow">
+                        <Button className="btn" type="button" onClick={() => dispatch(fetchCountryData(country))}>
+                          <Link to={`/country/${country}`} className="text-light"><FontAwesomeIcon icon={faArrowAltCircleRight} size="1.5x" /></Link>
+                        </Button>
+                      </div>
+                      <div className="card-details">
                         <Card.Body>
                           <Card.Title>
                             { country }
-                            <Button className="btn" type="button" onClick={() => dispatch(fetchCountryData(country))}>
-                              <Link to={`/country/${country}`} className="text-light"><FontAwesomeIcon icon={faArrowAltCircleRight} size="1.5x" /></Link>
-                            </Button>
                           </Card.Title>
                           <Card.Text>
                             {' '}
@@ -88,7 +90,7 @@ const Home = () => {
                             </span>
                           </Card.Text>
                         </Card.Body>
-                      </Card>
+                      </div>
                     </Col>
                   );
                 })

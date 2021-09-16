@@ -4,14 +4,14 @@ import { useSelector } from 'react-redux';
 import { faArrowAltCircleRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-  LinkContainer,
-} from 'react-router-bootstrap';
+  Container,
+} from 'react-bootstrap';
 
 function Details() {
   const countryCovidData = useSelector(({ country }) => country.covidData);
 
   return (
-    <LinkContainer>
+    <Container>
       <div className="details_page">
         <div className="inside">
           {
@@ -52,7 +52,7 @@ function Details() {
           <p><FontAwesomeIcon icon={faArrowAltCircleRight} /></p>
         </div>
       </div>
-    </LinkContainer>
+    </Container>
 
   );
 }
