@@ -6,6 +6,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   BrowserRouter as Router, useHistory,
 } from 'react-router-dom';
+import {
+  Container,
+} from 'react-bootstrap';
 import './Nav.css';
 
 export default function Nav() {
@@ -14,16 +17,18 @@ export default function Nav() {
   return (
     <Router>
       <header>
-        <nav className="nav">
-          <span onClick={() => history.goBack()}>
-            <FontAwesomeIcon icon={faChevronLeft} />
-          </span>
-          <h4>2019</h4>
-          <h4>COVID-19</h4>
-          <FontAwesomeIcon icon={faMicrophone} />
-          <FontAwesomeIcon icon={faCog} />
+        <Container>
+          <nav className="nav">
+            <span onClick={() => history.goBack()}>
+              <FontAwesomeIcon icon={faChevronLeft} />
+            </span>
+            <h4>2019</h4>
+            <h4>COVID-19</h4>
+            <FontAwesomeIcon icon={faMicrophone} />
+            <FontAwesomeIcon icon={faCog} />
 
-        </nav>
+          </nav>
+        </Container>
       </header>
     </Router>
   );

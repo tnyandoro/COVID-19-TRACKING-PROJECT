@@ -16,31 +16,25 @@ function Details() {
         <div className="inside">
           {
         countryCovidData.length > 0 ? countryCovidData.map(({
-          confirmed, recovered, deaths, country, capital_city, abbreviation,
+          confirmed, deaths, country, capital_city, abbreviation,
         }) => (
           <div className="country" key={abbreviation}>
-            <h3>Covid-19 Details</h3>
+
             <div>
               <h4>
-                Country: &nbsp;
                 { country }
               </h4>
             </div>
             <div>
               <h5 className="cases">
-                Comfirmed Cases: &nbsp;
+                Confirmed Cases: &nbsp;
                 { confirmed }
               </h5>
             </div>
             <div>
-              <h4>
+              <h5>
                 Deaths: &nbsp;
                 { deaths }
-              </h4>
-              <h5>
-                {' '}
-                Recovered: &nbsp;
-                { recovered }
               </h5>
               <h5>
                 Capital: &nbsp;

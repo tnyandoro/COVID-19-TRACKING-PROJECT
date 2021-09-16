@@ -66,10 +66,10 @@ const Home = () => {
             <Row>
               {
                 continentalCovidData && continentalCovidData.map((data) => {
-                  const { country, population } = data.All;
+                  const { country, confirmed } = data.All;
                   return (
-                    <Col className="card" xs={6} sm={6} md={3} key={data.abbreviation}>
-                      <Card>
+                    <Col className="card" xs={6} md={3} key={data.abbreviation}>
+                      <Card className=".card-details">
                         <Card.Body>
                           <Card.Title>
                             { country }
@@ -78,12 +78,13 @@ const Home = () => {
                             </Button>
                           </Card.Title>
                           <Card.Text>
+                            {' '}
                             &nbsp;
                             <br />
                             <span>
                               {' '}
-                              Population: &nbsp;
-                              {population}
+                              Cases: &nbsp;
+                              {confirmed}
                             </span>
                           </Card.Text>
                         </Card.Body>
