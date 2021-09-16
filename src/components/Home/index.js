@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import { css } from '@emotion/react';
 import {
   Container, Col, Row, Form, Card, Button,
@@ -65,35 +66,36 @@ const Home = () => {
           !isLoading ? (<ClipLoader color="green" loading={isLoading} css={override} size={150} />) : (
             <Row>
               {
-                continentalCovidData && continentalCovidData.map((data) => {
-                  const { country, confirmed } = data.All;
-                  return (
-                    <Col className="card" xs={6} md={3} key={data.abbreviation}>
-                      <div className="arrow">
-                        <Button className="btn" type="button" onClick={() => dispatch(fetchCountryData(country))}>
-                          <Link to={`/country/${country}`} className="text-light"><FontAwesomeIcon icon={faArrowAltCircleRight} size="1.5x" /></Link>
-                        </Button>
-                      </div>
-                      <div className="card-details">
-                        <Card.Body>
-                          <Card.Title>
-                            { country }
-                          </Card.Title>
-                          <Card.Text>
-                            {' '}
-                            &nbsp;
-                            <br />
-                            <span>
+                continentalCovidData.filter((continentalCovidData) => continentalCovidData)
+                  .map((filteredData) => {
+                    const { country, confirmed } = filteredData.All;
+                    return (
+                      <Col className="card" xs={6} md={3} key={filteredData.abbreviation}>
+                        <div className="arrow">
+                          <Button className="btn" type="button" onClick={() => dispatch(fetchCountryData(country))}>
+                            <Link to={`/country/${country}`} className="text-light"><FontAwesomeIcon icon={faArrowAltCircleRight} size="1.5x" /></Link>
+                          </Button>
+                        </div>
+                        <div className="card-details">
+                          <Card.Body>
+                            <Card.Title>
+                              { country }
+                            </Card.Title>
+                            <Card.Text>
                               {' '}
-                              Cases: &nbsp;
-                              {confirmed}
-                            </span>
-                          </Card.Text>
-                        </Card.Body>
-                      </div>
-                    </Col>
-                  );
-                })
+                            &nbsp;
+                              <br />
+                              <span>
+                                {' '}
+                                Cases: &nbsp;
+                                {confirmed}
+                              </span>
+                            </Card.Text>
+                          </Card.Body>
+                        </div>
+                      </Col>
+                    );
+                  })
               }
             </Row>
           )
@@ -103,4 +105,7 @@ const Home = () => {
   );
 };
 
+Home.defaultProps = {
+  continentalCovidData: PropTypes.func,
+};
 export default Home;
