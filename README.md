@@ -8,7 +8,8 @@
 
 |Main Project page
 
-|![COVID-19-TRACKING-PROJECT](https://user-images.githubusercontent.com/30318155/133264437-38ea7329-a9a9-47d3-8a71-39ca3c5c6c5c.png)|
+|![COVID-19-TRACKING-PROJECT](https://user-images.githubusercontent.com/30318155/133608553-e2c7ad1b-0a9b-4195-a723-8834fb4f3df1.png)|
+|![COVID-19-TRACKING-PROJECT](https://user-images.githubusercontent.com/30318155/133609015-fde48e6e-1b4c-46c6-b1ca-acc0fa6daf8a.png)|
 
 ## Built With
 
