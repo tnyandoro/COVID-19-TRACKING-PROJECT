@@ -1,4 +1,3 @@
-/* eslint-disable camelcase */
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { faArrowAltCircleRight } from '@fortawesome/free-solid-svg-icons';
@@ -16,7 +15,7 @@ function Details() {
         <div className="inside">
           {
         countryCovidData.length > 0 ? countryCovidData.map(({
-          confirmed, deaths, country, capital_city, abbreviation,
+          confirmed, deaths, country, capitalCity, abbreviation,
         }) => (
           <div className="country" key={abbreviation}>
 
@@ -38,7 +37,7 @@ function Details() {
               </h5>
               <h5>
                 Capital: &nbsp;
-                { capital_city }
+                { capitalCity }
               </h5>
             </div>
 
