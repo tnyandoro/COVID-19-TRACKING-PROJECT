@@ -22,8 +22,8 @@ export default function Nav() {
             <span onClick={() => history.goBack()}>
               <FontAwesomeIcon icon={faChevronLeft} />
             </span>
-            <h4>2019</h4>
-            <h4>COVID-19</h4>
+            <h4>2021</h4>
+            <h4>COVID-19 CASES</h4>
             <FontAwesomeIcon icon={faMicrophone} />
             <FontAwesomeIcon icon={faCog} />
 
